@@ -7,7 +7,7 @@ class SearchBar extends Component {
 
   handleChange = event => {
     this.setState({ query: event.target.value });
-    this.props.search(this.state.query);
+    this.props.search(event.target.value);
   };
 
   render() {

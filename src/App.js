@@ -11,7 +11,6 @@ import AuthorDetail from "./AuthorDetail";
 class App extends Component {
   state = {
     currentAuthor: null,
-    authors: authors,
     filteredAuthors: authors
   };
   selectAuthor = author => {
@@ -19,7 +18,9 @@ class App extends Component {
   };
   filterAuthors = query => {
     const filterAuthors = authors.filter(author =>
-      author.first_name.includes(query)
+      `${author.first_name} ${author.last_name}`
+        .toLowerCase()
+        .includes(query.toLowerCase())
     );
     this.setState({ filteredAuthors: filterAuthors });
   };
