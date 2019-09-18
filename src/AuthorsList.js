@@ -15,7 +15,7 @@ function AuthorsList(props) {
 
   return (
     <div className="authors">
-      <SearchBar query={props.query} />
+      <SearchBar search={props.search} />
       <h3>Authors</h3>
       <div className="row">{authorCards}</div>
     </div>

@@ -31,7 +31,7 @@ class App extends Component {
       <AuthorsList
         authors={this.state.filteredAuthors}
         selectAuthor={this.selectAuthor}
-        query={this.filterAuthors}
+        search={this.filterAuthors}
       />
     );
   };
